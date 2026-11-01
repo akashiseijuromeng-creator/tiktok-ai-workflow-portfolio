@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok二次元周边素材A/B复盘看板｜芙宁娜亚克力钥匙扣</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+*{box-sizing:border-box;font-family:system-ui,-apple-system,sans-serif;margin:0;padding:0}
+body{background:#f7f8fa;color:#222;padding:24px;max-width:1450px;margin:0 auto}
+h1{font-size:24px;margin-bottom:8px}
+.subtitle{color:#666;margin-bottom:24px}
+.card-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.kpi-card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 8px #00000010}
+.kpi-card .num{font-size:26px;font-weight:bold;margin:4px 0}
+.chart-wrap{background:#fff;padding:20px;border-radius:12px;box-shadow:0 2px 8px #00000010;margin-bottom:20px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px #00000010;margin-bottom:24px}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid #eee;font-size:14px}
+th{background:#f3f4f6}
+.material-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px}
+.material-card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 2px 8px #00000010}
+.material-card h3{margin-bottom:10px;font-size:16px}
+.material-card p{font-size:14px;line-height:1.6;color:#444;margin-bottom:6px}
+.section{background:#fff;padding:22px;border-radius:12px;box-shadow:0 2px 8px #00000010;margin-bottom:24px;}
+h2{font-size:20px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #eee;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.grid-full{width:100%;margin-bottom:16px;}
+.sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+@media (max-width:768px){
+    .card-row{grid-template-columns:repeat(2,1fr);}
+    .material-grid{grid-template-columns:1fr;}
+    .grid-2{grid-template-columns:1fr;}
+    .sample-grid{grid-template-columns:1fr;}
+}
+.img-box{width:100%;border-radius:8px;overflow:hidden;background:#f1f3f5;margin-bottom:8px;}
+.img-box img{width:100%;height:auto;object-fit:contain;display:block;}
+.snap-card{padding:12px;background:#f7f8fa;border-radius:8px;}
+.snap-card h4{font-size:14px;margin-bottom:6px;color:#333;}
+.sample-card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 8px #00000010;}
+.sample-card h4{margin:8px 0 4px 0;font-size:15px;}
+.tip{background:#e8f0fe;padding:14px;border-radius:8px;margin-top:16px;font-size:14px;color:#2b4b80;}
+</style>
+</head>
+<body>
+<h1>TikTok二次元周边素材A/B复盘看板</h1>
+<div class="subtitle">商品：芙宁娜亚克力钥匙扣｜IP：原神</div>
+
+
+<div class="card-row">
+  <div class="kpi-card"><div>素材总数</div><div class="num">4</div></div>
+  <div class="kpi-card"><div>平均完播率</div><div class="num">23.4%</div></div>
+  <div class="kpi-card"><div>平均点击率</div><div class="num">3.0%</div></div>
+  <div class="kpi-card"><div>最优版本</div><div class="num">en v2</div></div>
+</div>
+
+
+<div class="section">
+    <h2>🎨 素材视觉样例</h2>
+    <div class="sample-grid">
+        <div class="sample-card">
+            <div class="img-box">
+                <img src="/Users/akashiseijuro/Desktop/pofolio/furina-dark.jpg" alt="furina dark">
+            </div>
+            <h4>暗调水光棚拍主图</h4>
+            <p style="font-size:13px;color:#555;">适合短视频封面、商品首图</p>
+        </div>
+        <div class="sample-card">
+            <div class="img-box">
+                <img src="/Users/akashiseijuro/Desktop/pofolio/furina-table.jpg" alt="furina table">
+            </div>
+            <h4>桌面实景展示图</h4>
+            <p style="font-size:13px;color:#555;">适合详情页、种草素材</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="chart-wrap">
+  <canvas id="chartComplete"></canvas>
+</div>
+<div class="chart-wrap">
+  <canvas id="chartClick"></canvas>
+</div>
+
+
+<table>
+  <thead>
+    <tr><th>语种</th><th>版本</th><th>风格</th><th>完播率</th><th>点击率</th><th>Art Prompt</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>zh</td><td>v1</td><td>直白产品介绍</td><td>16.2%</td><td>2.1%</td><td>原神二次元插画，芙宁娜钥匙扣，白底，商品图，明亮干净</td></tr>
+    <tr><td>zh</td><td>v2</td><td>轻快二次元种草</td><td>25.8%</td><td>3.3%</td><td>氛围感原神插画，柔光，芙宁娜钥匙扣挂在帆布包挂件，水雾柔光，氛围感镜头</td></tr>
+    <tr><td>en</td><td>v1</td><td>TikTok casual种草</td><td>24.5%</td><td>3.1%</td><td>anime aesthetic, Furina genshin keychain, soft water bokeh, bag charm shot</td></tr>
+    <tr><td>en</td><td>v2</td><td>TikTok casual种草</td><td>27.1%</td><td>3.6%</td><td>cozy genshin scene, Furina acrylic charm on canvas bag, soft moonlight water effect</td></tr>
+  </tbody>
+</table>
+
+
+<div class="material-grid">
+  <div class="material-card">
+    <h3>zh v1｜中文基线版</h3>
+    <p>口播：二次元小伙伴们，今天上新一款超人气周边——芙宁娜亚克力钥匙扣！这款钥匙扣加厚高透亚克力，通透干净，印刷清晰，适合收藏和日常搭配。喜欢的不要错过。</p>
+    <p>帖子文案：原神粉必备｜芙宁娜亚克力钥匙扣✨ 高透亚克力，图案清晰，日常挂包超好看</p>
+    <p>标签：#原神周边 #芙宁娜亚克力钥匙扣 #亚克力钥匙扣</p>
+  </div>
+  <div class="material-card">
+    <h3>zh v2｜中文优化版</h3>
+    <p>口播：镜头缓缓聚焦，芙宁娜亚克力钥匙扣在光线里晶莹透亮。高透亚克力，色彩还原好看，不管是自用还是送同好都很合适。</p>
+    <p>帖子文案：原神粉丝必入｜芙宁娜亚克力钥匙扣<br>- 高透亚克力，色彩还原<br>- 小巧便携，挂包百搭<br>随身带上芙宁娜✨</p>
+    <p>标签：#原神周边 #芙宁娜钥匙扣 #亚克力钥匙扣 #二次元收藏 #二次元好物</p>
+  </div>
+  <div class="material-card">
+    <h3>en v1｜英文基线版</h3>
+    <p>Script & caption：Genshin Furina keychain, high transparent acrylic, vivid print, perfect for bag charm. Great for collection & daily use.</p>
+    <p>Tags: #GenshinImpact #Furina #AnimeMerch #Keychain</p>
+  </div>
+  <div class="material-card">
+    <h3>en v2｜英文优化版</h3>
+    <p>Script & caption：This Furina acrylic charm brings the vibe of Teyvat everywhere. Clear acrylic, nice print, great for your backpack.</p>
+    <p>Tags: #GenshinImpact #FurinaMerch #AnimeKeychain #Teyvat</p>
+  </div>
+</div>
+
+
+<div class="section">
+    <h2>⚙️ 自动化工作流附录</h2>
+    <div class="grid-full">
+        <div class="snap-card">
+            <div class="img-box">
+                <img src="/Users/akashiseijuro/Desktop/pofolio/make-workflow.png" alt="make workflow">
+            </div>
+            <h4>Make 自动化工作流</h4>
+        </div>
+    </div>
+    <div class="grid-2">
+        <div class="snap-card">
+            <div class="img-box">
+                <img src="/Users/akashiseijuro/Desktop/pofolio/prompt-copy.png" alt="prompt copy">
+            </div>
+            <h4>文案分支 Prompt 配置</h4>
+        </div>
+        <div class="snap-card">
+            <div class="img-box">
+                <img src="/Users/akashiseijuro/Desktop/pofolio/prompt-image.png" alt="prompt image">
+            </div>
+            <h4>商品图生成 Prompt 配置</h4>
+        </div>
+    </div>
+    <div class="grid-full">
+        <div class="snap-card">
+            <div class="img-box">
+                <img src="/Users/akashiseijuro/Desktop/pofolio/feishu-ab.png" alt="feishu ab table">
+            </div>
+            <h4>飞书多维表｜A/B测试数据表</h4>
+        </div>
+    </div>
+    <div class="grid-full">
+        <div class="snap-card">
+            <div class="img-box">
+                <img src="/Users/akashiseijuro/Desktop/pofolio/feishu-iter.png" alt="feishu iter table">
+            </div>
+            <h4>飞书多维表｜迭代记录</h4>
+        </div>
+    </div>
+    <div class="tip">
+💡项目说明：整套自动化流水线，由飞书表格输入角色与商品参数，经由Make调用AI同时产出绘图Prompt + 多语种带货文案；再将投放完播率、点击率回写表格，完成「素材生成‑投放‑数据复盘‑迭代Prompt」闭环。
+    </div>
+</div>
+
+
+<script>
+const ctx1 = document.getElementById('chartComplete').getContext('2d');
+new Chart(ctx1,{type:'bar',data:{labels:['zh v1','zh v2','en v1','en v2'],datasets:[{label:'完播率 %',data:[16.2,25.8,24.5,27.1],backgroundColor:'#69a2d8'}]},options:{responsive:true,plugins:{title:{display:true,text:'完播率对比'}}}})
+const ctx2 = document.getElementById('chartClick').getContext('2d');
+new Chart(ctx2,{type:'bar',data:{labels:['zh v1','zh v2','en v1','en v2'],datasets:[{label:'点击率 %',data:[2.1,3.3,3.1,3.6],backgroundColor:'#67b892'}]},options:{responsive:true,plugins:{title:{display:true,text:'点击率对比'}}}})
+</script>
+</body>
+</html>
+
